@@ -112,19 +112,20 @@ a {
 
 .hero-content {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .hero-image {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 36%;
+  max-width: 36%;
 }
 
 .hero-image .profile-photo {
   width: 100%;
   height: auto;
-  max-height: 70vh;
+  max-height: 60vh;
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
@@ -132,15 +133,15 @@ a {
 }
 
 .hero-image .profile-placeholder {
-  width: 280px;
-  height: 340px;
+  width: 260px;
+  height: 300px;
   background: var(--secondary-color);
   border-radius: 12px;
   box-shadow: var(--shadow);
 }
 
 .hero-text {
-  flex: 1;
+  flex: 1 1 58%;
   margin-top: 1rem;
   padding-left: 0;
 }
@@ -153,31 +154,32 @@ a {
   letter-spacing: 1px;
 }
 
-.welcome-circles {
-  display: flex;
-  gap: 2rem;
+.welcome-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.welcome-circle {
-  width: 140px;
-  height: 140px;
+.welcome-card {
+  min-height: 90px;
   background: var(--primary-color);
   color: var(--bg-white);
-  border-radius: 50%;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 1rem 1.25rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  text-align: center;
 }
 
-.welcome-circle:hover {
+.welcome-card:hover {
   background: var(--accent-color);
-  color: var(--primary-color);
+  color: var(--bg-white);
   transform: translateY(-4px);
 }
 

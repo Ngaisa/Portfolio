@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       
-      // Animate hamburger menu
+      
       const spans = menuToggle.querySelectorAll('span');
       spans[0].classList.toggle('rotate');
       spans[1].classList.toggle('fade');
